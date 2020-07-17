@@ -18,8 +18,7 @@
       </intent-filter>
     </activity>
 
-    <activity
-      android:name=".EditActivity">
+    <activity android:name=".EditActivity">
       <intent-filter>
         <action android:name="${applicationId}.edit" />
 

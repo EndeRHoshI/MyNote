@@ -2,33 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
   android:orientation="vertical">
 
   <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#EEEEEE"
+    android:padding="4dp"
     android:gravity="center_vertical"
     android:drawableLeft="@mipmap/ic_launcher"
     android:text="NotePad"/>
 
   <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_note_list"
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="1"/>
+    android:layout_weight="1"
+    android:layout_marginTop="4dp"
+    tools:listitem="@layout/item_note"/>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#DDDDDD" />
 
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
+      android:id="@+id/iv_back"
       android:layout_width="0dp"
-      android:layout_height="wrap_content"
+      android:layout_height="36dp"
       android:layout_weight="1"
       android:src="@mipmap/ic_back"/>
 
     <ImageView
+      android:id="@+id/iv_edit"
       android:layout_width="0dp"
-      android:layout_height="wrap_content"
+      android:layout_height="36dp"
       android:layout_weight="1"
       android:src="@mipmap/ic_edit"/>
 
