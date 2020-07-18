@@ -9,10 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * 小记事本 Adapter
+ */
 class MyNoteAdapter(private val context: Context, private val data: MutableList<MyNoteEntity>) :
   RecyclerView.Adapter<MyNoteAdapter.MyNoteViewHolder>() {
 
+  // 今天内文章的日期格式
   private val displayFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+
+  // 非今天内文章的日期格式
   private val detailedFormat = SimpleDateFormat("MM月dd日", Locale.getDefault())
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyNoteViewHolder {

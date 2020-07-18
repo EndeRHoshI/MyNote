@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
-
+/**
+ * 小记事本主活动，展示数据库里边的文章
+ */
 class MainActivity : AppCompatActivity() {
 
   private var adapter: MyNoteAdapter? = null
@@ -24,12 +26,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     iv_edit.setOnClickListener {
+      // 点击编辑按钮，记录创建时间，并且跳转到编辑活动
       val intent = Intent(this, EditActivity::class.java)
       intent.putExtra("createTime", System.currentTimeMillis())
       startActivity(intent)
     }
   }
 
+  // 在 onResume 方法里更新页面内容
   override fun onResume() {
     super.onResume()
 
