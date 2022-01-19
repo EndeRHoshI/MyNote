@@ -1,83 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical"
-  tools:ignore="ContentDescription,RtlHardcoded">
-
-  <TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:drawableLeft="@mipmap/ic_launcher"
-    android:gravity="center_vertical"
-    android:text="NotePad" />
-
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:orientation="vertical">
-
-    <EditText
-      android:id="@+id/et_title"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@null"
-      android:hint="在这里输入标题"
-      android:padding="8dp"
-      android:textSize="16sp" />
-
-    <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_marginLeft="8dp"
-      android:layout_marginRight="8dp"
-      android:background="#DDDDDD" />
-
-    <EditText
-      android:id="@+id/et_content"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1"
-      android:background="@null"
-      android:gravity="start"
-      android:hint="在这里输入内容"
-      android:padding="8dp"
-      android:textSize="16sp" />
-
-    <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_marginLeft="8dp"
-      android:layout_marginRight="8dp"
-      android:background="#DDDDDD" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ContentDescription,RtlHardcoded,Autofill,TextFields">
 
     <TextView
-      android:id="@+id/tv_create_time"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:padding="8dp"
-      tools:text="创建时间 11:29" />
-  </LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="NotePad"
+        app:drawableLeftCompat="@mipmap/ic_launcher" />
 
-  <View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="#DDDDDD" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="2">
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="在这里输入标题"
+            android:padding="8dp"
+            android:textSize="16sp" />
 
-    <ImageView
-      android:id="@+id/iv_back"
-      android:layout_width="0dp"
-      android:layout_height="36dp"
-      android:layout_weight="1"
-      android:src="@mipmap/ic_back" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#DDDDDD" />
 
-  </LinearLayout>
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="在这里输入内容"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#DDDDDD" />
+
+        <TextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            tools:text="创建时间 11:29" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_back" />
+
+    </LinearLayout>
 
 </LinearLayout>
